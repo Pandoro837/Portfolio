@@ -21,3 +21,8 @@ body{font-family: 'Noto Sans KR', sans-serif;}
 .bg-pwhip {background-color: #ffefd6;}
 .bg-shark {background-color: #282c34;}
 .bg-porcelain {background-color: #f6f7f8;}
+
+/* navbar */
+#navbar {
+    display: grid;
+}
