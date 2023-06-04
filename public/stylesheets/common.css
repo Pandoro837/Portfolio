@@ -22,7 +22,59 @@ body{font-family: 'Noto Sans KR', sans-serif;}
 .bg-shark {background-color: #282c34;}
 .bg-porcelain {background-color: #f6f7f8;}
 
+/* header */
+.header {
+    width: 100%;
+}
 /* navbar */
-#navbar {
-    display: grid;
+.nav {
+    display: flex;
+    flex-wrap: wrap;
+    align-content: center;
+    position: fixed;
+    padding: 15px;
+    top: 0;
+    width: 100%;
+    height: 50px;
+    background-color: red;
+}
+
+.tab {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+
+/* main */
+.main {
+    margin-top: 80px;
+    width: 100%;
+    background-color: green;
+}
+
+/* section */
+.section {
+    width: 100%;
+    height: 100vh;
+}
+.section:first-child {
+    background-color: yellow;
+}
+.section:nth-child(2) {
+    background-color: aqua;
+}
+.section:nth-child(3) {
+    background-color: white;
+}
+
+/* footer */
+.footer {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100px;
+    background-color: black;
 }
