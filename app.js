@@ -16,7 +16,7 @@ app.use('/', (req, res) => {
 });
 
 app.use('/cms', (req, res) =>{
-
+    res.render('cms');
 });
 
 app.listen(port, () => {
