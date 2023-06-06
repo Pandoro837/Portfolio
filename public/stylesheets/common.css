@@ -22,6 +22,24 @@ body{font-family: 'Noto Sans KR', sans-serif;}
 .bg-shark {background-color: #282c34;}
 .bg-porcelain {background-color: #f6f7f8;}
 
+/* icon */
+.icon_login {
+    content: url(/images/person-fill.svg);
+    width: 1.5rem;
+    height: 1.5rem;
+}
+.icon_github {
+    content: url(/images/github.svg);
+    border-radius: 100%;
+    width: 3rem;
+    height: 3rem;
+}
+/* button */
+.btn-language {
+    border: none;
+    background-color: inherit;
+    cursor: pointer;
+}
 /* header */
 .header {
     width: 100%;
@@ -32,40 +50,44 @@ body{font-family: 'Noto Sans KR', sans-serif;}
     flex-wrap: wrap;
     align-content: center;
     position: fixed;
-    padding: 15px;
+    padding: 1rem;
     top: 0;
     width: 100%;
-    height: 50px;
-    background-color: red;
+    height: 80px;
+    background-color: #f8b133;
+    box-sizing: border-box;
+}
+
+.nav>.tab {
+    justify-content: end;
+}
+.nav ul { align-items: center;}
+.nav ul li {
+    padding : 0 0.5rem;
 }
 
 .tab {
-    width: 100%;
     display: flex;
     flex-direction: row;
-    justify-content: space-evenly;
+    box-sizing: border-box;
+}
+.tab:first-child {
+    width: 80%;
+}
+.tab:nth-child(2) {
+    width: 20%;
 }
 
 /* main */
 .main {
     margin-top: 80px;
     width: 100%;
-    background-color: green;
 }
 
 /* section */
 .section {
     width: 100%;
     height: 100vh;
-}
-.section:first-child {
-    background-color: yellow;
-}
-.section:nth-child(2) {
-    background-color: aqua;
-}
-.section:nth-child(3) {
-    background-color: white;
 }
 
 /* footer */
@@ -76,5 +98,5 @@ body{font-family: 'Noto Sans KR', sans-serif;}
     align-items: center;
     width: 100%;
     height: 100px;
-    background-color: black;
+    background-color: white;
 }
