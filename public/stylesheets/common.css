@@ -1,4 +1,5 @@
 /*reset css*/ html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abbr,acronym,address,big,cite,code,del,dfn,em,img,ins,kbd,q,s,samp,small,strike,strong,sub,sup,tt,var,b,u,i,center,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td,article,aside,canvas,details,embed,figure,figcaption,footer,header,hgroup,menu,nav,output,ruby,section,summary,time,mark,audio,video {margin: 0;padding: 0;border: 0;font-size: 100%;font: inherit;vertical-align: baseline;}/* HTML5 display-role reset for older browsers */article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section {display: block;}body {line-height: 1;}ol,ul {list-style: none;}blockquote,q {quotes: none;}blockquote:before,blockquote:after,q:before,q:after {content: "";content: none;}table {border-collapse: collapse;border-spacing: 0;}img {display: block;}a {text-decoration: none;color: inherit;}
+html {box-sizing: border-box;} *,*::after,*::before {box-sizing: inherit;}
 
 /* font */
 @font-face {
@@ -10,7 +11,7 @@
 .font-lg {font-size: 1.2rem;}
 .font-md {font-size: 1rem;}
 .font-sm {font-size: 0.7rem;}
-body{font-family: 'Noto Sans KR', sans-serif;}
+body{font-family: 'Noto Sans KR', sans-serif; line-height: 150%;}
 
 /* color */
 .font-orange {color: #f8b133;}
@@ -23,39 +24,47 @@ body{font-family: 'Noto Sans KR', sans-serif;}
 .bg-porcelain {background-color: #f6f7f8;}
 
 /* icon */
-.icon_login {
+.icon-login {
     content: url(/images/person-fill.svg);
     width: 1.5rem;
     height: 1.5rem;
 }
-.icon_github {
+.icon-github {
     content: url(/images/github.svg);
-    border-radius: 100%;
     width: 3rem;
     height: 3rem;
 }
+.icon-arrow-left {
+    content: url(/images/caret-left-fill.svg);
+}
+.icon-arrow-right {
+    content: url(/images/caret-right-fill.svg);
+}
+.icon-close {
+    content: url(/images/x.svg)
+}
 /* button */
-.btn-language {
+.btn-none {
     border: none;
-    background-color: inherit;
     cursor: pointer;
+    background-color: inherit;
 }
 /* header */
 .header {
     width: 100%;
+    position: fixed;
+    z-index: 1;
+    top: 0;
 }
 /* navbar */
 .nav {
     display: flex;
     flex-wrap: wrap;
     align-content: center;
-    position: fixed;
     padding: 1rem;
-    top: 0;
     width: 100%;
     height: 80px;
     background-color: #f8b133;
-    box-sizing: border-box;
 }
 
 .nav>.tab {
@@ -69,7 +78,6 @@ body{font-family: 'Noto Sans KR', sans-serif;}
 .tab {
     display: flex;
     flex-direction: row;
-    box-sizing: border-box;
 }
 .tab:first-child {
     width: 80%;
@@ -86,8 +94,28 @@ body{font-family: 'Noto Sans KR', sans-serif;}
 
 /* section */
 .section {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: center;
     width: 100%;
     height: 100vh;
+    padding: 5rem;
+}
+.section-header {
+    width: 100%;
+    padding: 1rem;
+    font-size: 1.2rem;
+}
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    position: relative;
+    width: 100%;
+    height: 80%;
+    padding: 2rem;
+    background-color: white;
 }
 
 /* footer */
@@ -99,4 +127,89 @@ body{font-family: 'Noto Sans KR', sans-serif;}
     width: 100%;
     height: 100px;
     background-color: white;
+}
+
+/* modal */
+body.modal-open {overflow: hidden;}
+.modal {
+    position: fixed;
+    top:0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgb(0,0,0);
+    background-color: rgba(0, 0, 0, .4);
+    z-index: 1;
+    display: none;
+}
+
+.modal-header {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 1rem;
+}
+
+.modal-body {
+    position:relative;
+    width: 100%;
+    padding: 2rem;
+}
+
+.modal-content {
+    position: relative;
+    top: 50%;
+    transform: translate(0,-50%);
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+}
+
+.modal.active {
+    display: block;
+}
+
+/* 로그인 모달 */
+.modal-content.login-modal {
+    width: 30%;
+    height: 30%;
+    padding: 2rem;
+    background-color: white;
+}
+
+/* 프로젝트 모달 */
+.modal-content.project-modal {
+    width: 70%;
+    height: auto;
+    background-color: white;
+}
+
+/* 프로젝트 섹션 */
+.project-subject {
+    width: 100%;
+}
+.img-container {
+    width: 60%;
+    padding: 2rem;
+}
+.project-thumb {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.project-discription {
+    width: 40%;
+    height: 100%;
+    padding: 2rem;
+}
+
+.project-pagenation {
+    position: absolute;
+    top: 50%;
+    left: 0%;
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
 }

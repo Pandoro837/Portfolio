@@ -16,25 +16,66 @@
                 <li><a href="#project">프로젝트</a></li>
             </ul>
             <ul class="tab font-shark font-bold">
-                <li><button id="language" class="btn-language font-bold">ko</button></li>
-                <li><a id="login" href="#login"><img class="icon_login"></a></li>
+                <li><button id="language" class="btn-none font-bold">ko</button></li>
+                <li><a id="login" href="#login"><img class="icon-login"></a></li>
             </ul>
         </nav>
     </header>
-    <main class="main">
+    <main class="main bg-pwhip">
         <section id="introduce" class="section">
-            <h1>자기 소개</h1>
+            <h1 class="section-header font-bold">자기 소개</h1>
+            <div class="container">
+            </div>
         </section>
         <section id="my_skills" class="section">
-            <h1>내 기술</h1>
+            <h1 class="section-header font-bold">내 기술</h1>
+            <div class="container">
+            </div>
         </section>
         <section id="project" class="section">
-            <h1>프로젝트</h1>
+            <h1 class="section-header font-bold">프로젝트</h1>
+            <div class="container">
+                <h2 class="project-subject">Bnplatform</h2>
+                <div class="img-container">
+                    <img id ="project-thumb" src="/images/project/bnplatform/BnPlatform_2.png" class="project-thumb">
+                </div>
+                <div class="project-discription">
+                    <span>
+                        프로젝트 소개
+                    </span>
+                </div>
+                <div class="project-pagenation">
+                    <button class="btn-none"><img class="icon-arrow-left"></button>
+                    <button class="btn-none"><img class="icon-arrow-right"></button>
+                </div>
+            </div>
         </section>
         <footer class="footer">
-            <a href="https://github.com/Pandoro837"><img class="icon_github"></a>
+            <a href="https://github.com/Pandoro837"><img class="icon-github"></a>
         </footer>
         <script src="/javascripts/index.js"></script>
     </main>
+
+    <div id="modal-login" class="modal">
+        <div class="modal-content login-modal">
+            <div>로그인 모달</div>
+        </div>
+    </div>
+    <div id="modal-project" class="modal">
+        <div class="modal-content project-modal">
+            <div class="modal-header">
+                <h2>project subject</h2>
+                <button class="btn-none btn-close"><img class="icon-close"></button>
+            </div>
+            <div class="modal-body">
+                <img class="project-thumb" src="/images/project/bnplatform/BnPlatform_2.png">
+                <div class="project-pagenation">
+                    <button class="btn-none"><img class="icon-arrow-left"></button>
+                    <button class="btn-none"><img class="icon-arrow-right"></button>
+                </div>
+            </div>
+        </div>
+    </div>
+
 </body>
 </html>
