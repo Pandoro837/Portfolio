@@ -16,6 +16,7 @@ function change_language(country) {
 const modals = document.getElementsByClassName('modal');
 const login = document.getElementById('login');
 let thumb = document.getElementById('project-thumb');
+let closeBtn = document.getElementById('close');
 
 /** login modal click */
 login.addEventListener('click', () => {
@@ -39,4 +40,9 @@ window.addEventListener('click', (e) => {
     if(e.target.classList.contains('modal')) {
         modal_toggle(e.target);
     }
+});
+
+/** close - modal 닫기 */
+closeBtn.addEventListener('click', (e) => {
+    modal_toggle(e.target.closest('.modal'));
 });
