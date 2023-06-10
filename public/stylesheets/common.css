@@ -72,7 +72,7 @@ body{font-family: 'Noto Sans KR', sans-serif; line-height: 150%;}
     padding: 1rem;
     width: 100%;
     height: var(--height-nav);
-    background-color: #f8b133;
+    background-color: var(--color-orange);
 }
 
 .nav>.tab {
