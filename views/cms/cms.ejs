@@ -18,7 +18,11 @@
         </nav>
     </header>
     <main class="main">
-        <%-include('introduce.ejs') %>
+        <% if(type == 'introduce') {%>
+            <%-include('introduce.ejs') %>
+        <%} else {%>
+            <%-include('myskills.ejs') %>
+        <%} %>
         <footer class="footer">
             <div style="color: white;">깃 허브 로고 위치</div>
         </footer>
