@@ -19,15 +19,13 @@
     </header>
     <main class="main">
         <% if(type === 'introduce') {%>
-            <%-include('introduce.ejs') %>
-        <%} else if(type === 'myskills') {%>
-            <%-include('myskills.ejs') %>
-        <%} else {%>
-            <%-include('project.ejs') %>
-        <%}%>
-        <footer class="footer">
-            <div style="color: white;">깃 허브 로고 위치</div>
-        </footer>
+                <%-include('introduce.ejs') %>
+            <%} else if(type === 'myskills') {%>
+                <%-include('myskills.ejs') %>
+            <%} else {%>
+                <%-include('project.ejs') %>
+            <%}%>
+        <%-include('../includes/footer.ejs') %>
     </main>
 </body>
 </html>
