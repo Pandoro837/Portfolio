@@ -1,0 +1,10 @@
+.section.cms {
+    flex-direction: column;
+    justify-content: start;
+}
+
+.form-cms {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
