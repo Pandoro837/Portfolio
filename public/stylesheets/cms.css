@@ -8,3 +8,10 @@
     display: flex;
     flex-direction: column;
 }
+
+.label-cms {
+    width: 100%;
+}
+.input-cms {
+    width: 100%;
+}
